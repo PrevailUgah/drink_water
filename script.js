@@ -32,7 +32,7 @@ function highlightCups(idx) {
     updateBigCup();
 }
 
-// 4. Logic to calculate, color-code, and animate the Big Cup
+// 4. Logic to calculate and animate the Big Cup
 function updateBigCup() {
     // Count how many small cups have the class name "full"
     const fullCups = document.querySelectorAll('.cup-small.full').length;
@@ -43,25 +43,10 @@ function updateBigCup() {
         percentage.style.visibility = 'hidden';
         percentage.style.height = 0;
     } else {
-        // Show it and calculate the percentage height based on the 330px max CSS height
+        // Show it, calculate the percentage height, and update text
         percentage.style.visibility = 'visible';
-        percentage.style.height = `${(fullCups / totalCups) * 330}px`; 
-        
-        // Calculate the raw numeric percentage (e.g., 50 or 87.5) to update text and evaluate color
-        const currentPercent = (fullCups / totalCups) * 100;
-        percentage.innerText = `${currentPercent}%`;
-
-        // Clear out any old color classes before applying the new one
-        percentage.classList.remove('color-blue', 'color-yellow', 'color-green');
-
-        // Dynamic threshold checks for color shifting
-        if (currentPercent >= 80) {
-            percentage.classList.add('color-green');
-        } else if (currentPercent >= 50) {
-            percentage.classList.add('color-yellow');
-        } else {
-            percentage.classList.add('color-blue');
-        }
+        percentage.style.height = `${(fullCups / totalCups) * 330}px`; // 330 is the max height in CSS
+        percentage.innerText = `${(fullCups / totalCups) * 100}%`;
     }
 
     // If the big cup is completely full, hide the top "Remained" text area
