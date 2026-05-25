@@ -74,7 +74,7 @@ body {
 }
 
 /* 5. Mobile Responsiveness */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     h1 {
         font-size: 1.8rem;
         text-align: center;
