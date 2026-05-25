@@ -1,4 +1,4 @@
-# Daily Hydration Tracker 💧
+# Daily Hydration Tracker 💧 https://prevailugah.github.io/drink_water/
 
 Welcome to the **Daily Hydration Tracker**! This is a simple, interactive web application designed to help you stay healthy by tracking your daily water intake. 
 
