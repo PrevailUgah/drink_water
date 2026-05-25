@@ -53,7 +53,8 @@ body {
 }
 
 
-/* The base water styling (handles size and smooth animation) */
+
+/* 1. Base style for the water section inside the big cup */
 .percentage {
     display: flex;
     align-items: center;
@@ -61,25 +62,26 @@ body {
     font-weight: bold;
     font-size: 30px;
     height: 0; 
-    transition: background-color 0.4s ease, height 0.3s ease; /* Smoothly transitions both height and color! */
+    /* This rule animates both height and color changes smoothly */
+    transition: background-color 0.4s ease, height 0.3s ease; 
 }
 
-/* Color state 1: Default Blue/Purple (0% to 49%) */
+/* 2. Color state: 0% to 49% (Make sure there is NO space between the class names!) */
 .percentage.color-blue {
-    background-color: #6a0dad;
-    color: #fff;
+    background-color: #6a0dad !important;
+    color: #ffffff;
 }
 
-/* Color state 2: Yellow (50% to 79%) */
+/* 3. Color state: 50% to 79% */
 .percentage.color-yellow {
-    background-color: #ffd166;
-    color: #333; /* Darker text so it's readable on yellow */
+    background-color: #ffd166 !important;
+    color: #333333; 
 }
 
-/* Color state 3: Green (80% to 100%) */
+/* 4. Color state: 80% to 100% */
 .percentage.color-green {
-    background-color: #06d6a0;
-    color: #fff;
+    background-color: #06d6a0 !important;
+    color: #ffffff;
 }
 
 .remained {
