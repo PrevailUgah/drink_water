@@ -72,3 +72,24 @@ body {
     flex: 1; /* Automatically takes up all remaining empty space */
     transition: 0.3s ease;
 }
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .cups {
+        width: 100%;
+    }
+}
